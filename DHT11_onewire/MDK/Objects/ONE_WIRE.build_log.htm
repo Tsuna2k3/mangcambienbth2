@@ -1,0 +1,300 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: nghia nghia, nghia, LIC=MPPLD-8D2MG-56AQ2-941VA-8WHZY-F42VY
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Admin\Downloads\projectstm32\projectstm32\ONE_WIRE\ONE_WIRE.uvprojx
+Project File Date:  03/20/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+DHT11.c(1): warning: In file included from...
+./DHT11.h(5): warning: In file included from...
+./Delay_Tim.h(10): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+DHT11.c(1): warning: In file included from...
+./DHT11.h(19): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+DHT11.c(23): warning: no previous extern declaration for non-static variable 'time' [-Wmissing-variable-declarations]
+uint16_t time = 0;
+         ^
+DHT11.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t time = 0;
+^
+DHT11.c(43): warning: void function 'DHT11_Start' should not return void expression [-Wpedantic]
+                return DHT11_Start(DHT11);
+                ^      ~~~~~~~~~~~~~~~~~~
+DHT11.c(57): warning: void function 'DHT11_Start' should not return void expression [-Wpedantic]
+                return DHT11_Start(DHT11);
+                ^      ~~~~~~~~~~~~~~~~~~
+DHT11.c(69): warning: void function 'DHT11_Start' should not return void expression [-Wpedantic]
+                return DHT11_Start(DHT11);
+                ^      ~~~~~~~~~~~~~~~~~~
+DHT11.c(1): warning: In file included from...
+./DHT11.h(11): warning: padding struct 'DHT11_Name' with 2 bytes to align 'Temp' [-Wpadded]
+    float Temp;
+          ^
+DHT11.c(125): warning: unused variable 'Humi' [-Wunused-variable]
+        float Temp, Humi;
+                    ^
+DHT11.c(123): warning: unused variable 'nhietdo16bit' [-Wunused-variable]
+        uint16_t nhietdo16bit;
+                 ^
+DHT11.c(125): warning: unused variable 'Temp' [-Wunused-variable]
+        float Temp, Humi;
+              ^
+10 warnings generated.
+compiling DHT11.c...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_usart.c(22): warning: In file included from...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(49): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_usart.c(1043): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  itmask = ((uint16_t)0x01 << (uint16_t)bitpos);
+         ~  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+compiling stm32f10x_usart.c...
+Delay_Tim.c(2): warning: In file included from...
+./Delay_Tim.h(10): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+Delay_Tim.c(1): warning: In file included from...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(87): warning: In file included from...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+Delay_Tim.c(28): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+3 warnings generated.
+compiling Delay_Tim.c...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/misc.c(131): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+                                               ~ ^~~~~~~~~~~
+1 warning generated.
+compiling misc.c...
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(246): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  return (GPIOx->IDR);
+  ~~~~~~  ~~~~~~~^~~
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(128): warning: integer constant not in range of enumerated type 'GPIO_CONF' [-Wassign-enum]
+      conf &= ~1;
+              ^
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg &= ~(0xF << (num << 2));
+       ~~ ^~~~~~~~~~~~~~~~~~~~
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(141): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg |= ((conf << 2) | mode) << (num << 2);
+       ~~ ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+4 warnings generated.
+compiling GPIO_STM32F10x.c...
+main.c(2): warning: In file included from...
+./Delay_Tim.h(10): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(4): warning: In file included from...
+./DHT11.h(19): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(14): warning: no previous prototype for function 'GPIO_Config' [-Wmissing-prototypes]
+void GPIO_Config(void) {
+     ^
+main.c(14): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void GPIO_Config(void) {
+^
+static 
+main.c(1): warning: In file included from...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(90): warning: In file included from...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(49): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.c(37): warning: no previous prototype for function 'UART1_config' [-Wmissing-prototypes]
+void UART1_config(void){
+     ^
+main.c(37): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UART1_config(void){
+^
+static 
+main.c(51): warning: no previous prototype for function 'UART_SendChar' [-Wmissing-prototypes]
+void UART_SendChar(char c){
+     ^
+main.c(51): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UART_SendChar(char c){
+^
+static 
+main.c(56): warning: no previous prototype for function 'UART_SendString' [-Wmissing-prototypes]
+void UART_SendString(char *str){
+     ^
+main.c(56): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UART_SendString(char *str){
+^
+static 
+main.c(62): warning: no previous extern declaration for non-static variable 'Temp' [-Wmissing-variable-declarations]
+float Temp = 1;
+      ^
+main.c(62): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+float Temp = 1;
+^
+main.c(63): warning: no previous extern declaration for non-static variable 'Humi' [-Wmissing-variable-declarations]
+float Humi = 1;
+      ^
+main.c(63): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+float Humi = 1;
+^
+main.c(81): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                sprintf(Tempstring, "%.2fC", Temp);
+                ~~~~~~~                      ^~~~
+main.c(82): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                sprintf(Humistring, "%.2f", Humi);
+                ~~~~~~~                     ^~~~
+main.c(93): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(4): warning: In file included from...
+./DHT11.h(11): warning: padding struct 'DHT11_Name' with 2 bytes to align 'Temp' [-Wpadded]
+    float Temp;
+          ^
+main.c(64): warning: no previous extern declaration for non-static variable 'DHT11' [-Wmissing-variable-declarations]
+DHT11_Name DHT11;
+           ^
+main.c(64): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+DHT11_Name DHT11;
+^
+main.c(65): warning: no previous extern declaration for non-static variable 'Tempstring' [-Wmissing-variable-declarations]
+char Tempstring[8], Humistring[8];
+     ^
+main.c(65): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char Tempstring[8], Humistring[8];
+^
+main.c(65): warning: no previous extern declaration for non-static variable 'Humistring' [-Wmissing-variable-declarations]
+char Tempstring[8], Humistring[8];
+                    ^
+main.c(65): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char Tempstring[8], Humistring[8];
+^
+16 warnings generated.
+compiling main.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(22): warning: In file included from...
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(725): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+             TIM_BDTRInitStruct->TIM_Break | TIM_BDTRInitStruct->TIM_BreakPolarity |
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(1982): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp = CCER_CCE_Set << TIM_Channel;
+      ~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(2012): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp = CCER_CCNE_Set << TIM_Channel;
+      ~ ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/src/stm32f10x_tim.c(2057): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp1 = CCER_CCE_Set << (uint16_t)TIM_Channel;
+       ~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+compiling stm32f10x_tim.c...
+linking...
+Program Size: Code=8888 RO-data=468 RW-data=12 ZI-data=1676  
+".\Objects\ONE_WIRE.axf" - 0 Error(s), 42 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+   * Component: Framework Version: 3.6.0
+   * Component: GPIO Version: 3.6.0
+   * Component: RCC Version: 3.6.0
+   * Component: TIM Version: 3.6.0
+   * Component: USART Version: 3.6.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_Target_1
+  C:\Users\Admin\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\Admin\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+  C:\Users\Admin\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc
+  C:\Users\Admin\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:GPIO:1.3
+      Include file:  RTE_Driver\GPIO_STM32F10x.h
+      Source file:   RTE_Driver\GPIO_STM32F10x.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\system_stm32f10x.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:TIM:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
+
+   * Component: Keil::Device:StdPeriph Drivers:USART:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
